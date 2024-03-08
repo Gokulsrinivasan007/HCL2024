@@ -1,0 +1,13 @@
+<form [formGroup]="loginForm">
+
+    <label>
+        Username:
+        <input type="text" [formControl]="userName" placeholder="userName">
+    </label>
+    <label>
+        password:
+        <input type="password" [formControl]="password" placeholder="password">
+    </label>
+    <button type="submit" [disabled]="!loginForm.valid">Submit Application</button> 
+
+</form>
