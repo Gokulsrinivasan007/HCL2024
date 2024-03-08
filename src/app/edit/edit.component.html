@@ -1,0 +1,25 @@
+<button #trigger class="btn btn-primary" data-action="toggle">Action</button>
+<div #content *ngIf="isOpen" class="menu-container">
+
+<form [formGroup]="editForm">
+
+    <label>
+        Employee Name:
+        <input type="text" [formControl]="name" placeholder="userName">
+    </label>
+    <label>
+        Employee ID:
+        <input type="number" [formControl]="id" placeholder="userName">
+    </label><label>
+        Designation:
+        <input type="text" [formControl]="designation" placeholder="userName">
+    </label>
+    <label>
+        Location:
+        <input type="text" [formControl]="location" placeholder="password">
+    </label>
+    <button type="button" [disabled]="!editForm.valid">Update</button> 
+
+</form>
+
+</div>
